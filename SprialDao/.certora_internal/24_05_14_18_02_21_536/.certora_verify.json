@@ -1,0 +1,16 @@
+{
+    "importFilesToOrigRelpaths": {
+        "IERC20.spec": "IERC20.spec",
+        "IERC2612.spec": "IERC2612.spec"
+    },
+    "primary_contract": "ERC20",
+    "specfile": "BurnMint.spec",
+    "specfileOrigRelpath": "BurnMint.spec",
+    "specfilesToImportDecls": {
+        "BurnMint.spec": [
+            "./IERC2612.spec",
+            "./IERC20.spec"
+        ]
+    },
+    "type": "spec"
+}

@@ -1,0 +1,14 @@
+{
+    "importFilesToOrigRelpaths": {
+        "helper.spec": "helper.spec"
+    },
+    "primary_contract": "ERC20",
+    "specfile": "Initializable.spec",
+    "specfileOrigRelpath": "Initializable.spec",
+    "specfilesToImportDecls": {
+        "Initializable.spec": [
+            "./helper.spec"
+        ]
+    },
+    "type": "spec"
+}

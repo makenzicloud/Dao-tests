@@ -1,0 +1,18 @@
+{
+    "importFilesToOrigRelpaths": {
+        "/home/shan/my_project/Dao-tests/SprialDao/IERC20.spec": "IERC20.spec",
+        "/home/shan/my_project/Dao-tests/SprialDao/IERC2612.spec": "IERC2612.spec",
+        "/home/shan/my_project/Dao-tests/SprialDao/helper.spec": "helper.spec"
+    },
+    "primary_contract": "ERC20",
+    "specfile": "/home/shan/my_project/Dao-tests/SprialDao/BurnMint.spec",
+    "specfileOrigRelpath": "BurnMint.spec",
+    "specfilesToImportDecls": {
+        "/home/shan/my_project/Dao-tests/SprialDao/BurnMint.spec": [
+            "./IERC2612.spec",
+            "./IERC20.spec",
+            "./helper.spec"
+        ]
+    },
+    "type": "spec"
+}

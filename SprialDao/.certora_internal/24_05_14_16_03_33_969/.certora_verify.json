@@ -1,0 +1,8 @@
+{
+    "importFilesToOrigRelpaths": {},
+    "primary_contract": "ERC20",
+    "specfile": "BurnMint.spec",
+    "specfileOrigRelpath": "BurnMint.spec",
+    "specfilesToImportDecls": {},
+    "type": "spec"
+}

@@ -1,0 +1,13 @@
+Saving last configuration file to .certora_internal/24_05_14_22_47_49_828/run.conf
+There is no TAC file. Going to script EVMVerifier/certoraBuild.py to main_with_args()
+Creating dir /home/shan/my_project/Dao-tests/SprialDao/.certora_internal/24_05_14_22_47_49_828/.certora_config
+In /home/shan/my_project/Dao-tests/SprialDao/Initializable.spec, found the imports: [('helpers/helpers.spec', '1:1')]
+build failed
+Failure traceback: 
+CertoraUserInputError: In /home/shan/my_project/Dao-tests/SprialDao/Initializable.spec, the following import declarations do not import existing .spec files:
+1:1:"/home/shan/my_project/Dao-tests/SprialDao/helpers/helpers.spec"
+
+Encountered an error running Certora Prover:
+In /home/shan/my_project/Dao-tests/SprialDao/Initializable.spec, the following import declarations do not import existing .spec files:
+1:1:"/home/shan/my_project/Dao-tests/SprialDao/helpers/helpers.spec"
+

@@ -1,0 +1,13 @@
+{
+    "topics": [
+        {
+            "name": "type_check",
+            "messages": [
+                {
+                    "message": "Error in spec file (helper.spec:13:78): Syntax error: unexpected token near `&&`",
+                    "location": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "topics": [
+        {
+            "name": "type_check",
+            "messages": [
+                {
+                    "message": "Error in spec file (helper.spec:4:1): Syntax error: unexpected token near `definition`",
+                    "location": []
+                },
+                {
+                    "message": "Error in spec file (helper.spec:5:52): Syntax error: unexpected token near `&&`",
+                    "location": []
+                },
+                {
+                    "message": "Error in spec file (helper.spec:12:21): Syntax error: unexpected token near `,`",
+                    "location": []
+                },
+                {
+                    "message": "Error in spec file (helper.spec:13:15): Syntax error: unexpected token near `SetAndPast`",
+                    "location": []
+                }
+            ]
+        }
+    ]
+}
