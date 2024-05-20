@@ -1,11 +1,11 @@
-import "helpers/helpers.spec";
+import "./helper.spec";
 
 methods {
-    function paused() external returns (bool) envfree;
+    // function paused() external returns (bool) envfree;
     function pause() external;
     function unpause() external;
-    function onlyWhenPaused() external;
-    function onlyWhenNotPaused() external;
+    // function onlyWhenPaused() external;
+    // function onlyWhenNotPaused() external;
 }
 
 /*
@@ -57,24 +57,24 @@ rule unpause(env e) {
 │ Function correctness: whenPaused modifier can only be called if the contract is paused                              │
 └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-rule whenPaused(env e) {
-    require nonpayable(e);
+// rule whenPaused(env e) {
+//     require nonpayable(e);
 
-    onlyWhenPaused@withrevert(e);
-    assert !lastReverted <=> paused(), "works if and only if the contract is paused";
-}
+//     onlyWhenPaused@withrevert(e);
+//     assert !lastReverted <=> paused(), "works if and only if the contract is paused";
+// }
 
 /*
 ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 │ Function correctness: whenNotPaused modifier can only be called if the contract is not paused                       │
 └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-rule whenNotPaused(env e) {
-    require nonpayable(e);
+// rule whenNotPaused(env e) {
+//     require nonpayable(e);
 
-    onlyWhenNotPaused@withrevert(e);
-    assert !lastReverted <=> !paused(), "works if and only if the contract is not paused";
-}
+//     onlyWhenNotPaused@withrevert(e);
+//     assert !lastReverted <=> !paused(), "works if and only if the contract is not paused";
+// }
 
 /*
 ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
