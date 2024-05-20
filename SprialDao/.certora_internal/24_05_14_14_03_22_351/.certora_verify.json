@@ -1,8 +1,0 @@
-{
-    "importFilesToOrigRelpaths": {},
-    "primary_contract": "ERC20",
-    "specfile": "reentrancy.spec",
-    "specfileOrigRelpath": "reentrancy.spec",
-    "specfilesToImportDecls": {},
-    "type": "spec"
-}

@@ -1,8 +1,0 @@
-{
-    "importFilesToOrigRelpaths": {},
-    "primary_contract": "ERC20",
-    "specfile": "/home/shan/my_project/Dao-tests/SprialDao/BurnMint.spec",
-    "specfileOrigRelpath": "BurnMint.spec",
-    "specfilesToImportDecls": {},
-    "type": "spec"
-}
