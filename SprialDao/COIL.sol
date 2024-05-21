@@ -37,6 +37,7 @@ contract Coil is ERC20Permit {
         _burn(account_, amount_);
     }
     
+    //@audit Governance takeover
     //Should be owned by a multisig
     function setGovernance(address _governance) external {
         require(msg.sender == governance, "!governance");

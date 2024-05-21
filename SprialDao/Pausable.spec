@@ -1,7 +1,7 @@
 import "./helper.spec";
 
 methods {
-    // function paused() external returns (bool) envfree;
+    function paused() external returns (bool) envfree;
     function pause() external;
     function unpause() external;
     // function onlyWhenPaused() external;

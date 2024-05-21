@@ -199,6 +199,7 @@ contract Lock is
     /**
      * @notice Total balance of an account, including unlocked, locked and earned tokens.
      */
+     // @audit check if balances work correctly
     function getBalances(
         address _user
     ) external view returns (Balances memory) {
