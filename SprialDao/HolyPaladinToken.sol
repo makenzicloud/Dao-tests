@@ -544,6 +544,7 @@ contract HolyPaladinToken is ERC20("Holy Paladin Token", "hPAL"), Owner {
      * @param blockNumber block number
      * @return TotalLock : past TotalLock
      */
+     //@audit-issue Possible reentrancy here
     function getPastTotalLock(uint256 blockNumber) external view returns(TotalLock memory) {
         if(blockNumber >= block.number) revert InvalidBlockNumber();
 

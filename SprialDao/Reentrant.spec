@@ -7,13 +7,19 @@ ghost bool g_reverted;
 ghost uint g_sighash;
 
 // lets hook on "CALL" opcodes to simulate reentrancy
-hook CALL(uint g, address addr, uint value, uint inOffset, uint inSize, uint outOffset, uint outSize) returns (bool) {
+// hook CALL(uint g, address addr, uint value, uint inOffset, uint inSize, uint outOffset, uint outSize) returns (bool) {
+//     called_extcall = true;
+//     env e;
+//     bool cond;
+// Hook on "CALL" opcodes to simulate reentrancy and check for reverts
+hook CALL(uint g, address addr, uint value, uint argsOffset, uint argsLength, uint retOffset, uint retLength) uint rc {
     called_extcall = true;
-    env e;
-    bool cond;
 
-    if (q_sighash == sig: withdrawAllUnlockedToken().selector) {
-         withdrawAllUnlockedToken@withrevert(e); // name of the function that is being called
+    env e;
+    bool cond;    
+
+    if (g_sighash == sig: getPastTotalLock().selector) {
+         getPastTotalLock@withrevert(e); // name of the function that is being called
         g_reverted = lastReverted;
     }
     else {
@@ -31,5 +37,5 @@ rule no_reentrancy(method f, method g) filtered { f-> !f.isView, g -> !g.isView 
     
     // main assert here - we expect that if an external function is called
     // any reentrancy to a non-view function will revert
-    assert called_extcall => g_reverted, "Reentrancy weakness exists";
+    assert called_extcall => g_reverted, "Gocha Reentrancy weakness exists!!!";
 }

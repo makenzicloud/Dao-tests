@@ -9,17 +9,17 @@ hook CALL(uint g, address addr, uint value, uint argsOffset, uint argsLength, ui
     bool cond;
     
     // Adjusted to include the new function signature
-    if (g_sighash == sig:withdrawAllUnlockedToken().selector) {
-        withdrawAllUnlockedToken@withrevert(e); // Concrete name
+    if (g_sighash == sig:getPastTotalLock().selector) {
+        getPastTotalLock@withrevert(e); // Concrete name
         g_reverted = lastReverted;
     }
-    else if (g_sighash == sig:withdrawAllUnlockedToken().selector) {
-        withdrawAllUnlockedToken@withrevert(e); // Concrete name
+    else if (g_sighash == sig:getPastTotalLock().selector) {
+        getPastTotalLock@withrevert(e); // Concrete name
         g_reverted = lastReverted;
     }
-    else if (g_sighash == sig:withdrawAllUnlockedToken().selector) {
+    else if (g_sighash == sig:getPastTotalLock().selector) {
         calldataarg args;
-        withdrawAllUnlockedToken@withrevert(e, args); // Concrete name
+        getPastTotalLock@withrevert(e, args); // Concrete name
         g_reverted = lastReverted;
     }
     else {
