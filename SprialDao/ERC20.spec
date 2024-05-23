@@ -24,28 +24,28 @@ methods {
 // functionality 
 definition canIncreaseAllowance(method f) returns bool = 
 	f.selector == sig:approve(address,uint256).selector ||
-	f.selector == sig:permit(address,address,uint256,uint256,uint8,bytes32,bytes32).selector;
+	// f.selector == sig:permit(address,address,uint256,uint256,uint8,bytes32,bytes32).selector;
 
-definition canDecreaseAllowance(method f) returns bool = 
-	f.selector == sig:approve(address,uint256).selector || 
-	f.selector == sig:transferFrom(address,address,uint256).selector ||
-	f.selector == sig:permit(address,address,uint256,uint256,uint8,bytes32,bytes32).selector;
+// definition canDecreaseAllowance(method f) returns bool = 
+// 	f.selector == sig:approve(address,uint256).selector || 
+// 	f.selector == sig:transferFrom(address,address,uint256).selector ||
+// 	// f.selector == sig:permit(address,address,uint256,uint256,uint8,bytes32,bytes32).selector;
 
-definition canIncreaseBalance(method f) returns bool = 
-	f.selector == sig:mint(address,uint256).selector || 
-	f.selector == sig:transfer(address,uint256).selector ||
-	f.selector == sig:transferFrom(address,address,uint256).selector;
+// definition canIncreaseBalance(method f) returns bool = 
+// 	f.selector == sig:mint(address,uint256).selector || 
+// 	f.selector == sig:transfer(address,uint256).selector ||
+// 	f.selector == sig:transferFrom(address,address,uint256).selector;
 
-definition canDecreaseBalance(method f) returns bool = 
-	f.selector == sig:burn(address,uint256).selector || 
-	f.selector == sig:transfer(address,uint256).selector ||
-	f.selector == sig:transferFrom(address,address,uint256).selector;
+// definition canDecreaseBalance(method f) returns bool = 
+// 	f.selector == sig:burn(address,uint256).selector || 
+// 	f.selector == sig:transfer(address,uint256).selector ||
+// 	f.selector == sig:transferFrom(address,address,uint256).selector;
 
-definition canIncreaseTotalSupply(method f) returns bool = 
-	f.selector == sig:mint(address,uint256).selector;
+// definition canIncreaseTotalSupply(method f) returns bool = 
+// 	f.selector == sig:mint(address,uint256).selector;
 
-definition canDecreaseTotalSupply(method f) returns bool = 
-	f.selector == sig:burn(address,uint256).selector;
+// definition canDecreaseTotalSupply(method f) returns bool = 
+// 	f.selector == sig:burn(address,uint256).selector;
 
 //// ## Part 1: Basic rules ////////////////////////////////////////////////////
 
